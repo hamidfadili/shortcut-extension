@@ -1,0 +1,12 @@
+{
+    "manifest_version":2,
+    "name":"Custom shortcuts for chrome",
+    "description":"Custom shortcut for every website to make using websites faster",
+    "version":"0.1-SNAPSHOT",
+    "author":"in/hamidfadili",
+    "browser_action":{
+        "default_icon":"images/icone.png",
+        "default_popup":"pages/popup/index.html"
+    },
+    "permissions":[]
+}
