@@ -7,7 +7,102 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>Hello world!</p>
+    <header>
+        <img src="../../images/icone-banner.png" alt="icone" >
+    </header>
+    <ul class="nav nav-tabs">
+        <li class="nav-item"><a class="nav-link" onclick="goto('/user')">Page</a></li>
+        <li class="nav-item"><a class="nav-link active" onclick="goto('/user')">Site</a></li>
+        <li class="nav-item"><a class="nav-link" onclick="goto('/user')">Browser</a></li>
+    </ul>
+    <div id="site">
+        <div class="site-data">
+            <span class="key">current website : </span><span class="value" id="website">Youtube.com</span>
+        </div>
+        <div class="shortcuts-space">
+            <table>
+                <tr>
+                    <td>
+                        <input value="alt+shift+A" type="text">
+                    </td>
+                    <td>
+                        <select name="type">
+                            <option value="click">Click</option>
+                            <option value="focus">Focus</option>
+                            <option value="open-link">Open link</option>
+                        </select>
+                    </td>
+                    <td>
+                        <span>The element</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input value="B" type="text">
+                    </td>
+                    <td>
+                        <select name="type">
+                            <option value="click">Click</option>
+                            <option selected value="focus">Focus</option>
+                            <option value="open-link">Open link</option>
+                        </select>
+                    </td>
+                    <td>
+                        <span>The element</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="page" class="hide">
+        <div class="site-data">
+            <span class="key">current page : </span><span class="value" id="website">/watch</span>
+        </div>
+        <div class="shortcuts-space">
+            <table>
+                <tr>
+                    <td>
+                        <input value="alt+shift+A" type="text">
+                    </td>
+                    <td>
+                        <select name="type">
+                            <option value="click">Click</option>
+                            <option value="focus">Focus</option>
+                            <option selected value="open-link">Open link</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" value="https://youtube.com">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="Browser" class="hide">
+        <div class="site-data">
+            <span class="key">current page : </span><span class="value" id="website">/watch</span>
+        </div>
+        <div class="shortcuts-space">
+            <table>
+                <tr>
+                    <td>
+                        <input value="alt+shift+A" type="text">
+                    </td>
+                    <td>
+                        <select name="type">
+                            <option value="click">Click</option>
+                            <option value="focus">Focus</option>
+                            <option selected value="open-link">Open link</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" value="https://youtube.com">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
