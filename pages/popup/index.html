@@ -11,11 +11,11 @@
         <img src="../../images/icone-banner.png" alt="icone" >
     </header>
     <ul class="nav nav-tabs">
-        <li class="nav-item"><a class="nav-link" onclick="goto('/user')">Page</a></li>
-        <li class="nav-item"><a class="nav-link active" onclick="goto('/user')">Site</a></li>
-        <li class="nav-item"><a class="nav-link" onclick="goto('/user')">Browser</a></li>
+        <li class="nav-item"><a id="page-link" class="nav-link">Page</a></li>
+        <li class="nav-item"><a id="site-link" class="nav-link">Site</a></li>
+        <li class="nav-item"><a id="global-link" class="nav-link">Global</a></li>
     </ul>
-    <div id="site">
+    <div id="site" class="hidden">
         <div class="site-data">
             <span class="key">current website : </span><span class="value" id="website">Youtube.com</span>
         </div>
@@ -54,7 +54,7 @@
             </table>
         </div>
     </div>
-    <div id="page" class="hide">
+    <div id="page" class="hidden">
         <div class="site-data">
             <span class="key">current page : </span><span class="value" id="website">/watch</span>
         </div>
@@ -78,9 +78,9 @@
             </table>
         </div>
     </div>
-    <div id="Browser" class="hide">
+    <div id="global" class="hidden">
         <div class="site-data">
-            <span class="key">current page : </span><span class="value" id="website">/watch</span>
+            <span class="key">Global</span>
         </div>
         <div class="shortcuts-space">
             <table>
