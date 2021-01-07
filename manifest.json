@@ -5,8 +5,13 @@
     "version":"0.1",
     "author":"in/hamidfadili",
     "browser_action":{
-        "default_icon":"images/icone.png",
+        "default_icon":"images/icon.png",
         "default_popup":"pages/popup/index.html"
+    },
+    "icons": { 
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png" 
     },
     "permissions":[]
 }
