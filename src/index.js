@@ -1,11 +1,5 @@
 /** @jsx createElement */
-import store from "./data/store";
 import createElement from "./create-element";
+import AppComponent from "./components/AppComponent";
 
-const salam = (
-  <p>
-    <h2 class="salam cv an ahmd">lol</h2>
-  </p>
-);
-
-console.log(salam);
+document.getElementById("container").appendChild(<AppComponent />);

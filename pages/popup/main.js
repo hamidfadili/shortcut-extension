@@ -5,15 +5,12 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _data_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _create_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _create_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _components_AppComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
 /** @jsx createElement */
 
 
-var salam = (0,_create_element__WEBPACK_IMPORTED_MODULE_1__.default)("p", null, (0,_create_element__WEBPACK_IMPORTED_MODULE_1__.default)("h2", {
-  "class": "salam cv an ahmd"
-}, "lol"));
-console.log(salam);
+document.getElementById("container").appendChild((0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)(_components_AppComponent__WEBPACK_IMPORTED_MODULE_1__.default, null));
 
 /***/ }),
 /* 1 */
@@ -21,7 +18,226 @@ console.log(salam);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => /* export default binding */ __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var _create_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _ShortcutListComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+/* harmony import */ var _data_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
+/** @jsx createElement */
+
+
+
+var activeLinkClass = "active";
+var hiddenComponentClass = "hidden";
+var activeComponent = "page";
+var activeLink = "page-link";
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
+  return (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("div", null, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("header", null, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("img", {
+    src: "../../images/icone-banner.png",
+    alt: "icone"
+  })), (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("ul", {
+    "class": "nav nav-tabs"
+  }, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("li", {
+    "class": "nav-item"
+  }, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("a", {
+    id: "page-link",
+    "class": "nav-link active",
+    onClick: _goto("page")
+  }, "Page")), (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("li", {
+    "class": "nav-item"
+  }, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("a", {
+    id: "site-link",
+    "class": "nav-link",
+    onClick: _goto("site")
+  }, "Site")), (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("li", {
+    "class": "nav-item"
+  }, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("a", {
+    id: "global-link",
+    "class": "nav-link",
+    onClick: _goto("global")
+  }, "Global"))), (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("div", {
+    id: "site",
+    "class": "hidden"
+  }, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("div", {
+    "class": "site-data"
+  }, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("span", {
+    "class": "key"
+  }, "current website : "), (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("span", {
+    "class": "value",
+    id: "website"
+  }, "Youtube.com")), (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("div", {
+    "class": "shortcuts-space"
+  }, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)(_ShortcutListComponent__WEBPACK_IMPORTED_MODULE_1__.default, {
+    shortcuts: (0,_data_store__WEBPACK_IMPORTED_MODULE_2__.default)()
+  }))), (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("div", {
+    id: "page"
+  }, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("div", {
+    "class": "site-data"
+  }, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("span", {
+    "class": "key"
+  }, "current page : "), (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("span", {
+    "class": "value",
+    id: "website"
+  }, "/watch")), (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("div", {
+    "class": "shortcuts-space"
+  }, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)(_ShortcutListComponent__WEBPACK_IMPORTED_MODULE_1__.default, {
+    shortcuts: (0,_data_store__WEBPACK_IMPORTED_MODULE_2__.default)("youtube.com", "/watch")
+  }))), (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("div", {
+    id: "global",
+    "class": "hidden"
+  }, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("div", {
+    "class": "site-data"
+  }, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("span", {
+    "class": "key"
+  }, "Global")), (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("div", {
+    "class": "shortcuts-space"
+  }, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)(_ShortcutListComponent__WEBPACK_IMPORTED_MODULE_1__.default, {
+    shortcuts: (0,_data_store__WEBPACK_IMPORTED_MODULE_2__.default)("youtube.com")
+  }))));
+}
+
+var _goto = function _goto(componenet) {
+  return function (e) {
+    if (activeComponent == componenet) return;
+    document.getElementById(componenet).classList.remove(hiddenComponentClass);
+    document.getElementById(activeComponent).classList.add(hiddenComponentClass);
+    activeComponent = componenet;
+    document.getElementById(activeLink).classList.remove(activeLinkClass);
+    document.getElementById(e.target.id).classList.add(activeLinkClass);
+    activeLink = e.target.id;
+  };
+};
+
+/***/ }),
+/* 2 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+var createElement = function createElement(name, props) {
+  var element = null;
+
+  if (typeof name === "function") {
+    element = name(props);
+  } else {
+    element = document.createElement(name);
+    Object.keys(props || {}).forEach(function (key) {
+      if (key === "style") {
+        Object.keys(props[key]).forEach(function (styleKey) {
+          element.style[styleKey] = props[key][styleKey];
+        });
+      } else if (key === "class") {
+        props[key].split(" ").forEach(function (cls) {
+          return element.classList.add(cls);
+        });
+      } else if (key.startsWith("on")) {
+        element.addEventListener(key.substr(2).toLowerCase(), props[key]);
+      } else {
+        element[key] = props[key];
+      }
+    });
+  }
+
+  for (var _len = arguments.length, children = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+    children[_key - 2] = arguments[_key];
+  }
+
+  if (Array.isArray(children)) {
+    children.forEach(function (child) {
+      return addChild(element, child);
+    });
+  } else {
+    addChild(element, children);
+  }
+
+  return element;
+};
+
+var addChild = function addChild(element, child) {
+  if (Array.isArray(child)) {
+    child.forEach(function (c) {
+      return addChild(element, c);
+    });
+  } else if (child instanceof HTMLElement) {
+    element.appendChild(child);
+  } else if (typeof child === "string") {
+    element.textContent = child;
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createElement);
+
+/***/ }),
+/* 3 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => /* export default binding */ __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var _create_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _ShortcutComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+/** @jsx createElement */
+
+
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+  if (!props.shortcuts.length) {
+    return (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("p", null, "No shortcuts found!");
+  }
+
+  return (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("table", null, props.shortcuts.map(function (shortcut) {
+    return (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)(_ShortcutComponent__WEBPACK_IMPORTED_MODULE_1__.default, {
+      shortcut: shortcut
+    });
+  }));
+}
+
+/***/ }),
+/* 4 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => /* export default binding */ __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var _create_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/** @jsx createElement */
+
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var _props$shortcut = props.shortcut,
+      shortcut = _props$shortcut === void 0 ? {} : _props$shortcut;
+  return (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("tr", null, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("td", null, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("input", {
+    value: shortcut.keys,
+    type: "text"
+  })), (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("td", null, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("select", {
+    name: "type"
+  }, (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("option", {
+    selected: shortcut.actionType == "click",
+    value: "click"
+  }, "Click"), (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("option", {
+    selected: shortcut.actionType == "focus",
+    value: "focus"
+  }, "Focus"), (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("option", {
+    selected: shortcut.actionType == "open-link",
+    value: "open-link"
+  }, "Open link"))), (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("td", null, shortcut.actionType == "open-link" ? (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("input", {
+    type: "text",
+    value: shortcut.target
+  }) : (0,_create_element__WEBPACK_IMPORTED_MODULE_0__.default)("span", null, shortcut.target)));
+}
+
+/***/ }),
+/* 5 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => /* export default binding */ __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 var store = {
   global: {
@@ -51,11 +267,7 @@ var store = {
     }
   }
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (store);
-
-function getShortcutes(site, page) {
-  console.log("sala hola");
-
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(site, page) {
   if (page) {
     var currentSite = store[site];
     if (!currentSite) return [];
@@ -72,55 +284,6 @@ function getShortcutes(site, page) {
 
   return store.global.shortcuts;
 }
-
-/***/ }),
-/* 2 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
-/* harmony export */ });
-var createElement = function createElement(name, props) {
-  var element = document.createElement(name);
-  Object.keys(props || {}).forEach(function (key) {
-    if (key === "style") {
-      Object.keys(props[key]).forEach(function (styleKey) {
-        element.style[styleKey] = props[key][styleKey];
-      });
-    } else if (key === "class") {
-      props[key].split(" ").forEach(function (cls) {
-        return element.classList.add(cls);
-      });
-    } else {
-      element[key] = props[key];
-    }
-  });
-
-  for (var _len = arguments.length, children = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
-    children[_key - 2] = arguments[_key];
-  }
-
-  if (Array.isArray(children)) {
-    children.forEach(function (child) {
-      return addChild(element, child);
-    });
-  } else {
-    addChild(element, children);
-  }
-
-  return element;
-};
-
-var addChild = function addChild(element, child) {
-  if (child instanceof HTMLElement) {
-    element.appendChild(child);
-  } else if (typeof child === "string") {
-    element.textContent = child;
-  }
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createElement);
 
 /***/ })
 /******/ 	]);
