@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --watch",
     "dev-server": "webpack-dev-server"
   },
   "repository": {
@@ -26,6 +26,10 @@
     "@babel/preset-env": "^7.12.11",
     "babel-loader": "^8.2.2",
     "webpack": "^5.11.1",
-    "webpack-cli": "^4.3.1"
+    "webpack-cli": "^4.3.1",
+    "@babel/plugin-transform-react-jsx": "^7.12.12"
+  },
+  "dependencies": {
+    "babel-plugin-transform-react-jsx": "^6.24.1"
   }
 }

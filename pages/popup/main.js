@@ -6,9 +6,14 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _create_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/** @jsx createElement */
 
-console.log(_data_store__WEBPACK_IMPORTED_MODULE_0__.default);
-document.test = "hola";
+
+var salam = (0,_create_element__WEBPACK_IMPORTED_MODULE_1__.default)("p", null, (0,_create_element__WEBPACK_IMPORTED_MODULE_1__.default)("h2", {
+  "class": "salam cv an ahmd"
+}, "lol"));
+console.log(salam);
 
 /***/ }),
 /* 1 */
@@ -49,6 +54,8 @@ var store = {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (store);
 
 function getShortcutes(site, page) {
+  console.log("sala hola");
+
   if (page) {
     var currentSite = store[site];
     if (!currentSite) return [];
@@ -65,6 +72,55 @@ function getShortcutes(site, page) {
 
   return store.global.shortcuts;
 }
+
+/***/ }),
+/* 2 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+var createElement = function createElement(name, props) {
+  var element = document.createElement(name);
+  Object.keys(props || {}).forEach(function (key) {
+    if (key === "style") {
+      Object.keys(props[key]).forEach(function (styleKey) {
+        element.style[styleKey] = props[key][styleKey];
+      });
+    } else if (key === "class") {
+      props[key].split(" ").forEach(function (cls) {
+        return element.classList.add(cls);
+      });
+    } else {
+      element[key] = props[key];
+    }
+  });
+
+  for (var _len = arguments.length, children = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+    children[_key - 2] = arguments[_key];
+  }
+
+  if (Array.isArray(children)) {
+    children.forEach(function (child) {
+      return addChild(element, child);
+    });
+  } else {
+    addChild(element, children);
+  }
+
+  return element;
+};
+
+var addChild = function addChild(element, child) {
+  if (child instanceof HTMLElement) {
+    element.appendChild(child);
+  } else if (typeof child === "string") {
+    element.textContent = child;
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createElement);
 
 /***/ })
 /******/ 	]);

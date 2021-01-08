@@ -31,6 +31,7 @@ const store = {
 export default store;
 
 function getShortcutes(site, page) {
+  console.log("sala hola");
   if (page) {
     const currentSite = store[site];
     if (!currentSite) return [];

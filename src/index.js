@@ -1,5 +1,11 @@
+/** @jsx createElement */
 import store from "./data/store";
+import createElement from "./create-element";
 
-console.log(store);
+const salam = (
+  <p>
+    <h2 class="salam cv an ahmd">lol</h2>
+  </p>
+);
 
-document.test = "hola";
+console.log(salam);
